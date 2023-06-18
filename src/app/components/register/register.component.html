@@ -1,0 +1,115 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="60">
+        <!-- <mat-toolbar> -->
+                
+          <!-- </mat-toolbar> -->
+          <div class="container">
+            <div class="signup-left">
+                <form [formGroup]="signupForm" fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+                 <span>
+                         <div class="google-logo">
+                            <img  src="assets\images\Google-Logo.png" alt="Google-Logo.png">
+                         </div>
+                     <h2>Create your Google Account</h2>
+                     <p style="padding-bottom: 20px; font-size:medium;">Continue to Gmail</p>
+                 </span>
+                 <div fxLayout="row" style="width: 100%;">
+                    <div style="width: 55%;">
+                        <small class="req-msg" *ngIf="signupForm.controls['firstName'].dirty && signupForm.hasError('required','firstName')" style="padding-top: 0px; color: red">*First Name required</small>
+
+                    </div>
+                    <div style="width: 45%;">
+                        <small *ngIf="signupForm.controls['lastName'].dirty && signupForm.hasError('required','lastName')" style="padding-top: 0px; color: red">*Last Name required</small>
+
+                    </div>
+                 </div>
+                 <div class="fullname" fxLayout="row">
+                     
+                    <div fxLayout="column" >
+
+                        <mat-form-field appearance="outline" class="firstname">
+                            <mat-label>First name</mat-label>
+                            <input formControlName="firstName" matInput placeholder="First Name">
+                         </mat-form-field>
+
+                    </div>
+
+                    <div fxLayout="column">
+
+                        <mat-form-field appearance="outline" class="lastname">
+                            <mat-label>Last Name</mat-label>
+                            <input formControlName="lastName" matInput placeholder="Last Name">
+                        </mat-form-field>
+
+                    </div>
+
+                 </div>
+                 <div class="username-container">
+                    <small *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')" style="padding-top: 0px; color: red">*Username required</small>
+
+                    <mat-form-field appearance="outline" class="username-form">
+                        <mat-label>Username</mat-label>
+                        <input formControlName="email" matInput placeholder="Username">
+                    </mat-form-field>
+
+                    <p>You can use letters, numbers & periods</p>
+                 </div>
+                 <div fxLayout="row">
+                    <div style="width: 55%;">
+                        <small *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')" style="padding-top: 0px; color: red">*Password required</small>
+
+                    </div>
+                    <div style="width: 45%;">
+                        <small *ngIf="signupForm.controls['confirmPassword'].dirty && signupForm.hasError('required','confirmPassword')" style="padding-top: 0px; color: red">*Confirm required</small>
+
+                    </div>
+                 </div>
+                 <div fxLayout="row">
+                    <div>
+
+                        <mat-form-field appearance="outline" class="password-form">
+                            <mat-label>Password</mat-label>
+                            <input formControlName="password" type="password" matInput placeholder="Password">
+    
+                         </mat-form-field>
+
+                    </div>
+                    <div>
+
+                        <mat-form-field appearance="outline" class="password-confirm">
+                            <mat-label>Confirm</mat-label>
+                            <input formControlName="confirmPassword" type="password" matInput placeholder="Confirm">
+                        </mat-form-field>
+
+                    </div>
+
+
+                     
+                 </div>
+                 <div>
+                    <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
+                 </div>
+      <div class="create-next">         
+            <div class="btn-next">
+                <button type="submit" (click)="onSignup()"  mat-raised-button color="primary">Next</button>
+            </div>
+            <div class="create-anchor">
+                <a style="text-decoration: none; font-weight: 400; font-size: 14px; color: blue;" href="">Sign in Instead</a>
+             </div>
+      </div> 
+
+    </form>
+  </div>
+             
+  <div class="signup-right" fxLayoutAlign="center center" fxLayout="column">
+    <div>
+        <img  src="assets\images\signup-photo.png" alt="signup-image.png">
+    </div>
+   <div>
+     <h3 style="padding: 50px; padding-top: 5px; font-size: large;">One account. All of Google working for you.</h3>
+   </div>
+   
+  </div>
+          </div>
+    </mat-card>
+</div>

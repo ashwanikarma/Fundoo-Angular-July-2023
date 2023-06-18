@@ -1,0 +1,46 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="28">
+        <!-- <mat-toolbar> -->
+                
+          <!-- </mat-toolbar> -->
+          <!-- (ngSubmit)="loginsumbit()" -->
+        <form [formGroup]="loginform" fxLayoutAlign="stretch" fxLayout="column" class="login-form" >
+            <span>
+                <div class="google-logo">
+                    <img  src="assets\images\Google-Logo.png" alt="Google-Logo.png" >
+                </div>
+                <h2>Sign in</h2>
+                <p style="padding-bottom: 20px;">Use your Google Account</p>
+            </span>
+            
+            <div fxLayout="column">
+                <small *ngIf="loginform.controls['email'].dirty && loginform.hasError('required','email')" style="padding-top: 0px; color: red">*Email is required</small>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput placeholder="Email">
+                  </mat-form-field>
+                 
+    
+            </div>
+            <div fxLayout="column">
+                <small *ngIf="loginform.controls['password'].dirty && loginform.hasError('required','password')" style=" color: red">*Password is required</small>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input formControlName="password" type="password" matInput placeholder="Password">
+                  </mat-form-field>
+                
+            </div>
+              <div class="forgot-col">              
+                <a style="text-decoration: none;font-weight: 400;font-size: 14px; color: blue;" href="">Forgot Password?</a>
+              </div>
+              <div class="create-next">         
+                    <div class="btn-next">
+                        <button (click)="onSubmit()" type="submit" mat-raised-button color="primary">Next</button>
+                    </div>
+                    <div class="create-anchor">
+                        <a style="text-decoration: none; font-weight: 400; font-size: 14px; color: blue;" href="">Create account</a>
+                     </div>
+              </div>   
+      </form>
+    </mat-card>
+</div>

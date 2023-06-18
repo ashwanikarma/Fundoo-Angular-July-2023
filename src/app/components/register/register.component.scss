@@ -1,0 +1,53 @@
+.main-div mat-card{
+    padding: 0px;
+    }
+.container{
+    display: flex;
+    padding: 50px;
+}
+.signup-left{
+
+    width: 55%;
+}
+.signup-right{
+width: 45%;
+text-align: center;
+}
+.main-div .btn-next{
+    float: right;
+    width: 50%;
+    // padding-right: 40px;
+    text-align: right;
+}
+.create-next
+{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+
+.create-anchor{
+
+    padding-top: 5px;
+    width: 50%;
+    float: left;
+}
+.firstname{
+    padding-right: 47px;
+    padding-bottom: 0px;
+}
+
+
+.username-form{
+    width: 100%;
+}
+
+.password-form{
+    padding-right: 47px;
+}
+.req-msg{
+    padding: 0px;
+}
+
